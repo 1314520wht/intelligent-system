@@ -2,7 +2,7 @@
 .index_headerMain {
   height: 60px;
   padding: 0 30px;
-  background: url(../img/header-bj.png);
+  background: url(~@/intelligent-ui/img/header-bj.png);
   background-size: 100% 100%;
 }
 .index_headerMain .platform_Logo {
@@ -103,3 +103,14 @@
   margin-left: 5px;
 }
 /* 主页面头部样式end */
+/* 首页内容部分start */
+.homePage_Main {
+  background-color: #F5F5F5;
+}
+.homePage_Main .typeArea {
+  width: 90.3%;
+  max-width: 1600px;
+  margin: auto;
+  padding-top: 25px;
+}
+/* 首页内容部分end */

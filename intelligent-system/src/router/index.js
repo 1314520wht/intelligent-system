@@ -1,13 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'intelmain',
+  //   component: () => import('@/views/intelligent-main'),
+  //   redirect: { name: 'system-home' },
+  //   children: [
+  //     { path: '/system-home', component: () => import('@/views/modules/system-home'), name: 'system-home', meta: { title: '首页', isTab: true } }
+  //   ]
+  // }
   {
     path: '/',
     name: 'intelmain',
-    component: () => import('@/views/intelligent-main'),
-    children: [
-      { path: '/system-home', component: () => import('@/views/modules/system-home'), name: 'home', meta: { title: '首页', isTab: true } }
-    ]
+    component: () => import('@/views/intelligent-main')
   }
 ]
 

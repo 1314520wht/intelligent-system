@@ -1,0 +1,123 @@
+/*
+ * Copyright 2020, Zhu Hong Wei
+ * Sponsor：GSWR
+ * 默认初始化样式表
+ * v1.0.0
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 14px;
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	font-family: "PingFangSC-Regular", "Microsoft Yahei";
+}
+
+html,body,div,
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,li,dt,dd,p,blockquote,pre,form,input,fieldset,table,th,td{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+	font-size: 100%;
+}
+
+ul,ol,dl,li,dt,dd,i,em,strong,th,tr,td,var{
+	list-style: none;
+	font-style: normal;
+	font-weight: normal;
+}
+
+table{
+	width: 100%;
+	max-width: 100%;
+	word-break: break-all;
+}
+
+img {
+	border: 0px;
+	max-width: 100%;
+}
+
+button{
+	cursor: pointer;
+	border: none;
+	padding: 0;
+}
+
+input,button,textarea,select,video {
+	outline: none;
+	font-family: "PingFangSC-Regular", "Microsoft Yahei";
+}
+
+input{
+	padding: 0 10px;
+}
+
+/*IEinput自带关闭按钮隐藏*/
+input::-ms-clear,
+input::-ms-reveal{
+	display: none;
+}
+
+textarea{
+	padding: 5px 10px;
+	resize: none;
+}
+
+a,
+a:hover,
+a:link,
+a:focus,
+a:visited,
+a:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+.clear:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.W-1000 {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.W-1200 {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.W-1366 {
+	width: 1366px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.W-1920 {
+	width: 1920px;
+	margin: 0 auto;
+	position: relative;
+}

@@ -1,0 +1,105 @@
+/* 主页面头部样式start */
+.index_headerMain {
+  height: 60px;
+  padding: 0 30px;
+  background: url(../img/header-bj.png);
+  background-size: 100% 100%;
+}
+.index_headerMain .platform_Logo {
+  float: left;
+}
+.index_headerMain .platform_Logo .logo_imgMain {
+  height: 60px;
+  line-height: 60px;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-left: 48px;
+  background: url(~@/intelligent-ui/img/logo.png) no-repeat;
+  background-size: 30px 30px;
+  background-position: 0 center;
+}
+.index_headerMain .head_navs {
+  float: left;
+  margin-left: 10%;
+}
+.index_headerMain .head_navs li {
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  color: rgba(255, 255, 255, 0.65);
+  display: inline-block;
+  padding: 0 16px;
+}
+.index_headerMain .head_navs li:hover,
+.index_headerMain .head_navs li.active {
+  color: #FFFFFF;
+  text-shadow: 0 0 0 #FFFFFF;
+  background: linear-gradient(360deg, rgba(0, 89, 255, 0.04) 0%, rgba(49, 113, 255, 0.65) 100%);
+}
+.index_headerMain .head_navs li a {
+  font-size: 16px;
+  vertical-align: middle;
+}
+.index_headerMain .head_navs li em {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  display: inline-block;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: #FFE6E6;
+  color: #FF4D4F;
+  font-size: 12px;
+}
+.index_headerMain .seach_help_remind {
+  float: right;
+}
+.index_headerMain .seach_help_remind ul {
+  display: inline-block;
+}
+.index_headerMain .seach_help_remind li {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 10px;
+}
+.index_headerMain .seach_help_remind li img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.index_headerMain .seach_help_remind .principal_backstageLink {
+  display: inline-block;
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.857rem;
+}
+.index_headerMain .seach_help_remind .principal_backstageLink a {
+  font-size: 13px;
+  padding: 0 8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.index_headerMain .seach_help_remind .principal_backstageLink a:last-child {
+  border-right: none;
+}
+.index_headerMain .seach_help_remind .user_Opeartion {
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+  line-height: 60px;
+  cursor: pointer;
+}
+.index_headerMain .seach_help_remind .user_Opeartion img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.index_headerMain .seach_help_remind .user_Opeartion span {
+  color: rgba(255, 255, 255, 0.8);
+  vertical-align: middle;
+  margin-left: 5px;
+}
+/* 主页面头部样式end */

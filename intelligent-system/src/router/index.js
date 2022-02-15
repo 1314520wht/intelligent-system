@@ -12,7 +12,7 @@ const routes = [
   // }
   {
     path: '/',
-    name: 'intelmain',
+    name: 'manager-homepage',
     component: () => import('@/views/intelligent-main')
   }
 ]

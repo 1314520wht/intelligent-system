@@ -3,7 +3,7 @@
         <intelligent-main-navbar ref="intelligentMainNavbar" @slideBarList="slideBarList" />
         <!-- 主页 -->
         <div class="homePage_Main" v-if="isHomePage">
-            <system-home></system-home>
+            <manager-homepage></manager-homepage>
             <!-- 问题反馈按钮及弹窗 -->
             <intelligent-main-questionBack ref="intelligentMainQuestionBack" />
         </div>
@@ -19,7 +19,7 @@
 <script>
 import { reactive, toRefs } from 'vue'
 import IntelligentMainNavbar from './intelligent-main-navbar'
-import SystemHome from './modules/system-home'
+import ManagerHomepage from './modules/manager/HomePage'
 export default {
   name: 'Main',
   setup () {
@@ -32,7 +32,7 @@ export default {
   },
   components: {
     IntelligentMainNavbar,
-    SystemHome
+    ManagerHomepage
   }
 }
 </script>

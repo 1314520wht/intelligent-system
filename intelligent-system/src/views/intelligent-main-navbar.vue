@@ -65,8 +65,8 @@
             <img src="@/intelligent-ui/img/user_img.png" />
             <!-- <span>{{ $store.state.user.name }}</span> -->
              <span>用户名</span>
-            <el-icon class="el-icon--right">
-                <!-- <arrow-down></arrow-down> -->
+            <el-icon class="el-icon--right" style="position:absolute;top:2px">
+              <el-icon class="el-icon-arrow-down el-icon--right"><arrow-down /></el-icon>
             </el-icon>
           </span>
           <template  #dropdown>
@@ -84,7 +84,7 @@
 </template>
 <script>
 import { reactive, toRefs } from 'vue'
-// import { ArrowDown } from 'element-plus'
+import { ArrowDown } from '@element-plus/icons'
 export default {
   name: 'app',
   setup () {
@@ -125,6 +125,9 @@ export default {
       ...toRefs(state),
       ...methods
     }
+  },
+  components: {
+    ArrowDown
   }
 }
 </script>

@@ -13,8 +13,13 @@ const routes = [
   {
     path: '/',
     name: 'manager-homepage',
-    component: () => import('@/views/intelligent-main')
+    component: () => import('@/views/intelligent-main'),
+    meta: { title: '管理人员首页' }
   }
+  // {
+  //   path: '/see-data',
+  //   name: 'see-data',
+  // }
 ]
 
 const router = createRouter({

@@ -41,6 +41,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.left_portions {
+  width: 100%;
+}
 .homePage_Main {
   min-height: calc(100vh - 60px);
 }

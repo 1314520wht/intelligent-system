@@ -2,12 +2,11 @@
   <!-- 左-导航 -->
   <div class="left_nav_Lists" :class="{ zoomState: zoomCondition }">
     <div class="zoomBtn" v-show="!zoomCondition">
-      <!-- <button type="button" @click="zoomCondition = !zoomCondition"></button> -->
       <button type="button" @click="openAndHide"></button>
     </div>
-    <p class="leftNavTitle" v-show="zoomCondition">{{ menuName }}</p>
+    <p class="leftNavTitle" v-show="zoomCondition">见证数据</p>
     <el-tree
-      :data="etsMenuList"
+      :data="etsMenuList1"
       :props="defaultProps"
       node-key="id"
       :currentNode="currentNodeKey"
@@ -20,29 +19,54 @@
     >
     <template v-slot:{ data }>
       <span class="custom-tree-node">
-        <i :class="data.icon"></i>
-        <span v-show="zoomCondition">{{ data.name }}</span>
+        <el-icon  @click="openAndHide"><fold /></el-icon>
+        <!-- <span v-show="zoomCondition">{{ data.name }}</span> -->
+        <span v-show="true">巴黎世家老师都说</span>
       </span>
     </template>
     </el-tree>
     <div class="zoomBtn1" v-show="zoomCondition">
-      <i
-        type="button"
-        @click="openAndHide"
-        :class="zoomCondition ? 'el-icon-s-fold' : 'el-icon-s-unfold'"
-      ></i>
+      <el-icon  @click="openAndHide"><fold /></el-icon>
     </div>
   </div>
 </template>
 <script>
 import { reactive, toRefs } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   name: 'Main',
   setup () {
+    const router = useRouter()
     const state = reactive({
       showTree: true,
       zoomCondition: true,
-      etsMenuList: [],
+      etsMenuList1: [
+        {
+          label: 'one',
+          name: '招标洗那',
+          icon: '<el-icon><document /></el-icon>',
+          children: [
+            {
+              label: 'one/one',
+              name: '张博上世纪1'
+            },
+            {
+              label: 'one/one',
+              name: '张博上世纪12'
+            }
+          ]
+        },
+        {
+          label: 'one',
+          name: '嗯啊',
+          children: [
+            {
+              label: 'one/one',
+              name: '嗯啊'
+            }
+          ]
+        }
+      ],
       currentNodeKey: '',
       menuName: '',
       defaultProps: {
@@ -57,6 +81,10 @@ export default {
         this.currentNodeKey = secondMenu.id
         this.$refs.tree.setCurrentKey(secondMenu.id)
       })
+      router.push({
+        name: 'see-all-data'
+      })
+      // this.$router.push('see-all-data')
       // var route = window.SITE_CONFIG['dynamicMenuRoutes'].filter(item => item.meta.menuId === secondMenu.id)[0]
       // if (route) {
       //   this.$router.push({ name: route.name })
@@ -64,8 +92,8 @@ export default {
     }
     // 左侧导航展开，收起以及展开后的文字隐藏
     const openAndHide = () => {
-      this.zoomCondition = !this.zoomCondition
-      if (!this.zoomCondition) { // 在收起状态下
+      state.zoomCondition = !state.zoomCondition
+      if (!state.zoomCondition) { // 在收起状态下
         const containChildren2 = document.querySelectorAll('.el-tree-node .el-tree-node__children .el-tree-node')
         console.log(containChildren2, 2)
         this.$refs.tree.$children.forEach(el => {
@@ -101,8 +129,25 @@ export default {
     }
   },
   components: {
-    // IntelligentMainNavbar
-    // ManagerHomepage
   }
 }
 </script>
+<style lang="less" scoped>
+/deep/.el-tree-node .el-tree-node__content {
+  line-height: 40px;
+  height: 40px;
+  padding-left: 26px !important;
+}
+/deep/.left_nav_Lists .custom-tree-node {
+  position: relative;
+  padding-left: 26px;
+}
+/deep/.el-tree-node>.el-tree-node__children {
+  .el-tree-node {
+    padding-left: 0 !important;
+    .el-tree-node__content {
+      padding-left: 39px !important;
+    }
+  }
+}
+</style>

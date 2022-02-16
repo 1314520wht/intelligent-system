@@ -74,13 +74,13 @@
       </div>
     </div>
     <!-- 联系客服 -->
-    <!-- <workbench-kefu /> -->
+    <kefu-box />
   </div>
 </template>
 <script>
 import { reactive, toRefs, ref } from 'vue'
+import kefuBox from '@/views/modules/manager/common/workbench-kefu'
 import IntelligentHomepageHead from '@/components/intelligent-homepage-head'
-// import { ArrowDown } from 'element-plus'
 export default {
   name: 'app',
   setup () {
@@ -135,7 +135,8 @@ export default {
     }
   },
   components: {
-    IntelligentHomepageHead
+    IntelligentHomepageHead,
+    kefuBox
   }
 }
 </script>

@@ -15,11 +15,21 @@ const routes = [
     name: 'manager-homepage',
     component: () => import('@/views/intelligent-main'),
     meta: { title: '管理人员首页' }
+    // children: [
+    //   {
+    //     path: '/see-all-data',
+    //     name: 'see-all-data',
+    //     component: () => import('@/views/modules/manager/see-data/all-project'),
+    //     meta: { title: '见证数据-全部' }
+    //   }
+    // ]
+  },
+  {
+    path: '/see-data',
+    name: 'see-data',
+    component: () => import('@/views/modules/manager/see-data/all-project'),
+    meta: { title: '管理人员首页' }
   }
-  // {
-  //   path: '/see-data',
-  //   name: 'see-data',
-  // }
 ]
 
 const router = createRouter({

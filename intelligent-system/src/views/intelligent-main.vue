@@ -9,8 +9,8 @@
         </div>
         <!-- 内容主体 -->
         <div class="platform_contentMain clear" v-else>
-          <intelligent-main-sidebar ref="etsMainSidebar" />
-          <intelligent-main-content ref="etsMainContent" />
+          <intelligent-main-sidebar ref="intelligentMainSidebar" />
+          <intelligent-main-content ref="intelligentMainContent" />
           <!-- 问题反馈按钮及弹窗 -->
           <!-- <ets-main-questionBack ref="EtsMainQuestionBack" /> -->
         </div>

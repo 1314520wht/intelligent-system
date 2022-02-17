@@ -114,6 +114,43 @@ body {
 }
 /* 主页面头部样式end */
 /* 首页内容部分start */
+.homePage_Main1 {
+  min-height: calc(100vh - 110px);
+}
+.homePage_Main1 .changePhone {
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  padding: 15px 8px;
+}
+.homePage_Main1 .changePhone .changePhone-img img {
+  width: 60px;
+  height: 60px;
+}
+.homePage_Main1 .changePhone .changePhoneText {
+  color: #b4b2b2;
+}
+.homePage_Main1 .information-content {
+  padding: 15px 10px;
+}
+.homePage_Main1 .information-content li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  padding: 5px 0;
+}
+.homePage_Main1 .information-content li span {
+  display: inline-block;
+  width: 200px;
+}
+.homePage_Main1 .information-content li p {
+  padding-left: 12px;
+  text-align: left;
+  width: calc(100% - 200px);
+}
+.homePage_Main1 .loginTime {
+  text-align: left;
+}
 .homePage_Main {
   background-color: #F5F5F5;
 }
@@ -11866,3 +11903,19 @@ body {
   }
 }
 /* 非首页内容样式end */
+/* 个人资料start */
+.personal-content {
+  width: 882px ;
+  min-height: 641px;
+  margin: 0 auto;
+}
+.personal-content .el-tabs__nav-scroll {
+  overflow: hidden;
+  /* text-align: center; */
+  display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
+/* 个人资料end */
